@@ -8,8 +8,8 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
-@Entity
 @Table(name = "CONTACT_DTLS")
+@Entity
 public class Contact {
 	
 	@Id
