@@ -1,10 +1,11 @@
 package in.ashokit.binding;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
@@ -13,7 +14,7 @@ import lombok.Data;
 public class Contact {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer contactId;
 	private String contactName;
 	private String contactEmail;
